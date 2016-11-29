@@ -7,7 +7,7 @@
 #### 2. [Project overview](#head2)
 #### 3. [Structure](#head3)
 #### 4. [Work process and Workflow](#head4)
-#### [5. Building and Publishing](#head5)
+#### 5. [Building and Publishing](#head5)
 
 ### <a name="head1"></a> 1. DESCRIPTION
 This repository holds the master project for the Axway Braggers project. The project aims at providing a common interface that interacts with third party blogging and forum APIs.
