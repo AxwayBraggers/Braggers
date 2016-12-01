@@ -29,7 +29,17 @@ module.exports = {
 	// usename is the key and the password is blank.  the other option is 'apikey' where the value of the
 	// APIKey header is the value of the key.  you can also set this to 'plugin' and define the key 'APIKeyAuthPlugin'
 	// which points to a file or a module that implements the authentication strategy
-	APIKeyAuthType: 'basic',
+	// APIKeyAuthType: 'basic',
+	APIKeyAuthType: 'plugin',
+	APIKeyAuthPlugin: 'appcgithubauth',
+
+	gihubAuth: {
+		clientID: '6d27775be933b0769914',
+		clientSecret: 'ba175c6d1c61b13ad23d83f18c536de7d8363f72',
+		callbackURL: "http://localhost:8080/auth/github/callback",
+		loginRoute: "/auth/github/login",
+		authPaths: ["/auth/github/callback", "/api/github/users/", "/api/post/", "/api/question/", "/api/github/logged"],
+	},
 
 	// The number of milliseconds before timing out a request to the server.
 	timeout: 120000,
@@ -86,5 +96,17 @@ module.exports = {
 
 	// your connector configuration goes here
 	connectors: {
+		'com.axway.wordpress.connector': {
+			modelAutogen: true,
+			wordpressApiUrl: 'https://public-api.wordpress.com/rest/v1.1/',
+			accessToken: "iaNg%wcAdulcR489HW&7bz8RGOY!kOQi@z4LF3BPWZhqljheYBXVlhHUyN6!ta^#",
+			blogId: 120312210,
+			blogUrl: "http://marinvasilevblog.wordpress.com",
+		},
+		'com.axway.braggers.stackoverflow': {
+			modelAutogen: true,
+			stackExchangeApiUrl: 'https://api.stackexchange.com/2.2/'
+		}
+
 	}
 };
